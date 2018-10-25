@@ -1,0 +1,49 @@
+{
+  "version": "0.1.5",
+  "name": "react-pdfmake",
+  "description": "",
+  "author": "Benjamin Kniffler <bkniffler@me.com>",
+  "main": "lib",
+  "esnext": "es",
+  "module": "es",
+  "types": "lib/index.d.js",
+  "license": "MIT",
+  "scripts": {
+    "up": "yarn upgrade-interactive --latest",
+    "netlify": "yarn build && cd example/react && yarn && yarn build",
+    "prepublishOnly": "yarn build && yarn test",
+    "clean": "rimraf lib",
+    "dev": "tsc --watch",
+    "build": "yarn clean && tsc && tsc --module esnext --outDir es",
+    "test": "jest",
+    "coverage": "codecov"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.2",
+    "codecov": "^3.1.0",
+    "jest": "^23.6.0",
+    "react": "^16.6.0",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^23.10.2",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3"
+  },
+  "dependencies": {
+    "@types/node": "^10.12.0",
+    "@types/react": "^16.4.18",
+    "pdfmake": "^0.1.38"
+  },
+  "peerDependencies": {},
+  "jest": {
+    "preset": "ts-jest",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**"
+    ],
+    "coverageReporters": [
+      "html",
+      "cobertura",
+      "text"
+    ]
+  }
+}
