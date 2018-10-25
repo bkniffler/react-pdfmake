@@ -2,7 +2,7 @@
   <h2>react-pdfmake</h2>
   <img alt="react-pdfmake" src="https://raw.githubusercontent.com/bkniffler/react-pdfmake/master/assets/preview.png" height="300px" />
   <br />
-  <strong>Super easy way to create PDFs with react components</strong>
+  <strong>Super easy way to create PDFs through react components.</strong>
   <br />
   <br />
   <a href="https://travis-ci.org/bkniffler/react-pdfmake">
@@ -179,3 +179,7 @@ export default (
   </PDFDocument>
 );
 ```
+
+## Credits
+
+- [pdfmake](https://github.com/bpampuch/pdfmake)
