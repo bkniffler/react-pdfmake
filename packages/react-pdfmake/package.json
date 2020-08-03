@@ -1,0 +1,29 @@
+{
+  "version": "0.3.0",
+  "name": "react-pdfmake",
+  "sideEffects": false,
+  "description": "",
+  "author": "Benjamin Kniffler <bkniffler@me.com>",
+  "main": "lib",
+  "esnext": "es",
+  "module": "es",
+  "types": "lib/index.d.js",
+  "license": "MIT",
+  "scripts": {
+    "prepublishOnly": "yarn build && yarn test",
+    "clean": "rimraf lib es",
+    "dev": "tsc --watch",
+    "build": "yarn clean && tsc && tsc --module esnext --outDir es"
+  },
+  "devDependencies": {
+    "react": "^16.13.1",
+    "@types/react": "^16.9.44",
+    "pdfmake": "^0.1.39",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.9.7"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "pdfmake": "*"
+  }
+}

@@ -11,7 +11,7 @@ import {
   PDFColumn,
   PDFColumns,
   pdf,
-} from '../../lib';
+} from '../../react-pdfmake';
 
 export default function Home() {
   const file = React.useMemo(() => {

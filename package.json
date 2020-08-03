@@ -1,47 +1,32 @@
 {
+  "private": true,
   "version": "0.3.0",
-  "name": "react-pdfmake",
-  "sideEffects": false,
-  "description": "",
-  "author": "Benjamin Kniffler <bkniffler@me.com>",
-  "main": "lib",
-  "esnext": "es",
-  "module": "es",
-  "types": "lib/index.d.js",
+  "name": "react-pdfmake-workspace",
   "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "up": "yarn upgrade-interactive --latest",
-    "netlify": "yarn build && cd example && yarn && yarn build",
-    "prepublishOnly": "yarn build && yarn test",
-    "clean": "rimraf lib",
-    "dev": "tsc --watch",
-    "build": "yarn clean && tsc && tsc --module esnext --outDir es",
+    "build": "yarn --cwd packages/react-pdfmake build && yarn --cwd packages/example build",
     "test": "jest",
     "coverage": "codecov"
   },
   "devDependencies": {
-    "react": "^16.13.1",
     "@types/jest": "^26.0.8",
     "@types/node": "^14.0.27",
-    "@types/react": "^16.9.44",
     "codecov": "^3.7.2",
     "prettier": "^2.0.5",
     "jest": "^26.2.2",
-    "pdfmake": "^0.1.39",
     "rimraf": "^3.0.2",
     "ts-jest": "^26.1.4",
-    "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
-  },
-  "peerDependencies": {
-    "react": "*",
-    "pdfmake": "*"
   },
   "jest": {
     "preset": "ts-jest",
     "collectCoverage": true,
     "collectCoverageFrom": [
-      "src/**"
+      "packages/react-pdfmake/src/**"
     ],
     "coverageReporters": [
       "html",

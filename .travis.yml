@@ -7,9 +7,10 @@ sudo: false
 cache: yarn
 
 install:
+  - rm -rf packages/example
   - yarn
 
 script:
-  - yarn build
+  - yarn --cwd packages/react-pdfmake build
   - yarn test
   - yarn coverage
