@@ -30,11 +30,11 @@ https://react-pdfmake.netlify.app
 
 ## Install
 
+Careful, pdfmake is now a peerDependency.
+
 <a name="yarn"/>
 
 ### Yarn
-
-Careful, pdfmake is now a peerDependency.
 
 ```
 yarn add react-pdfmake pdfmake
@@ -43,8 +43,6 @@ yarn add react-pdfmake pdfmake
 <a name="npm"/>
 
 ### NPM
-
-Careful, pdfmake is now a peerDependency.
 
 ```
 npm i react-pdfmake pdfmake
