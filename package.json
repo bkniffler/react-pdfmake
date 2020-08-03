@@ -11,7 +11,7 @@
   "license": "MIT",
   "scripts": {
     "up": "yarn upgrade-interactive --latest",
-    "netlify": "yarn build && cd example/react && yarn && yarn build",
+    "netlify": "yarn build && cd example && yarn && yarn build",
     "prepublishOnly": "yarn build && yarn test",
     "clean": "rimraf lib",
     "dev": "tsc --watch",
