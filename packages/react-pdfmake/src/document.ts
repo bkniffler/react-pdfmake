@@ -114,5 +114,4 @@ export interface IPDFDocument {
   ) => boolean;
 }
 const PDFDocument: React.SFC<IPDFDocument> = (props) => null;
-
 export default PDFDocument;

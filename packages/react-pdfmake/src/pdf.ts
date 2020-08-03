@@ -1,15 +1,12 @@
 import React from 'react';
 import convert from './convert';
 import { IPDFDocument } from './document';
-export { default as PDFDocument } from './document';
-export * from './elements';
-
 const pdfMake = require('pdfmake/build/pdfmake');
 const pdfFonts = require('pdfmake/build/vfs_fonts');
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
-interface IPDFActions {
+export interface IPDFActions {
   download: () => void;
   open: () => void;
   print: () => void;
@@ -26,5 +23,3 @@ export const printPDF = (content: React.ReactElement<IPDFDocument>) =>
 
 export const openPDF = (content: React.ReactElement<IPDFDocument>) =>
   pdf(content).open();
-
-export default pdf;

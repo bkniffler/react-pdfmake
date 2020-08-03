@@ -141,7 +141,6 @@ export default function Home() {
       </PDFDocument>
     );
   }, []);
-  console.log(file);
   return (
     <Layout home>
       <Head>
