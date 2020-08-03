@@ -2,6 +2,7 @@
   "compilerOptions": {
     "moduleResolution": "node",
     "module": "commonjs",
+    "esModuleInterop": true,
     "target": "es5",
     "lib": ["es6", "dom"],
     "jsx": "react",

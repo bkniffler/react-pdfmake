@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 const isType = (child: any, Bar: any) => {
   const inst = <Bar />;

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 interface IPDFStyle {
   fontSize?: number;
@@ -113,6 +113,6 @@ export interface IPDFDocument {
     previousNodesOnPage: Array<IPDFNode>
   ) => boolean;
 }
-const PDFDocument: React.SFC<IPDFDocument> = props => null;
+const PDFDocument: React.SFC<IPDFDocument> = (props) => null;
 
 export default PDFDocument;

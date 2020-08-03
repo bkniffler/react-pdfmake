@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import convert from './convert';
 import { IPDFDocument } from './document';
 export { default as PDFDocument } from './document';

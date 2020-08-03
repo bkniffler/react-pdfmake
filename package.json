@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "name": "react-pdfmake",
   "sideEffects": false,
   "description": "",
@@ -20,21 +20,23 @@
     "coverage": "codecov"
   },
   "devDependencies": {
-    "@types/jest": "^23.3.9",
-    "@types/node": "^10.12.5",
-    "@types/react": "^16.4.18",
-    "codecov": "^3.1.0",
-    "jest": "^23.6.0",
-    "react": "^16.6.1",
-    "rimraf": "^2.6.2",
-    "ts-jest": "^23.10.4",
-    "ts-node": "^7.0.1",
-    "typescript": "^3.1.6"
+    "react": "^16.13.1",
+    "@types/jest": "^26.0.8",
+    "@types/node": "^14.0.27",
+    "@types/react": "^16.9.44",
+    "codecov": "^3.7.2",
+    "prettier": "^2.0.5",
+    "jest": "^26.2.2",
+    "pdfmake": "^0.1.39",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.1.4",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
   },
-  "dependencies": {
-    "pdfmake": "^0.1.39"
+  "peerDependencies": {
+    "react": "*",
+    "pdfmake": "*"
   },
-  "peerDependencies": {},
   "jest": {
     "preset": "ts-jest",
     "collectCoverage": true,

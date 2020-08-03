@@ -26,7 +26,7 @@ const convert = (element: any) => {
     const { children, ...rest } = props;
     return {
       ...rest,
-      content: children
+      content: children,
     };
   }
   if (isType(element, PDFTable)) {
@@ -37,15 +37,15 @@ const convert = (element: any) => {
       pageOrientation,
       table: {
         ...rest,
-        body: children
-      }
+        body: children,
+      },
     };
   }
   if (isType(element, PDFColumns)) {
     const { children, ...rest } = props;
     return {
       ...rest,
-      columns: children
+      columns: children,
     };
   }
   if (isType(element, PDFTableRow)) {

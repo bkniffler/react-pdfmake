@@ -1,5 +1,7 @@
-import 'jest';
 import React from 'react';
+import Head from 'next/head';
+import Layout, { siteTitle } from '../components/layout';
+import utilStyles from '../styles/utils.module.css';
 import {
   PDFDocument,
   PDFText,
@@ -7,13 +9,13 @@ import {
   PDFTableRow,
   PDFTableColumn,
   PDFColumn,
-  PDFColumns
-} from '../src/index';
-import convert from '../src/convert';
+  PDFColumns,
+  pdf,
+} from '../../lib';
 
-describe('Test', () => {
-  it('should be true', () => {
-    const value = convert(
+export default function Home() {
+  const file = React.useMemo(() => {
+    return pdf(
       <PDFDocument
         pageSize="A5"
         pageOrientation="portrait"
@@ -26,21 +28,21 @@ describe('Test', () => {
           header: {
             fontSize: 18,
             bold: true,
-            margin: [0, 0, 0, 10]
+            margin: [0, 0, 0, 10],
           },
           subheader: {
             fontSize: 16,
             bold: true,
-            margin: [0, 10, 0, 5]
+            margin: [0, 10, 0, 5],
           },
           tableExample: {
-            margin: [0, 5, 0, 15]
+            margin: [0, 5, 0, 15],
           },
           tableHeader: {
             bold: true,
             fontSize: 13,
-            color: 'black'
-          }
+            color: 'black',
+          },
         }}
       >
         <PDFText style="subheader">Headers</PDFText>
@@ -138,7 +140,18 @@ describe('Test', () => {
         </PDFTable>
       </PDFDocument>
     );
-
-    expect(value).toMatchSnapshot();
-  });
-});
+  }, []);
+  console.log(file);
+  return (
+    <Layout home>
+      <Head>
+        <title>{siteTitle}</title>
+      </Head>
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <button onClick={() => file.print()}>Print PDF</button>
+        <button onClick={() => file.download()}>Download PDF</button>
+        <button onClick={() => file.open()}>Open PDF</button>
+      </section>
+    </Layout>
+  );
+}
