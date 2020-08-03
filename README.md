@@ -24,6 +24,10 @@
   <br />
 </div>
 
+## Demo
+
+https://react-pdfmake.netlify.app
+
 ## Install
 
 <a name="yarn"/>
